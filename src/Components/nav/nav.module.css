@@ -1,0 +1,65 @@
+.logoImg {
+   height: 22px;
+   width: auto;
+   padding: 15px 20px;
+   border-radius: 20px;
+}
+
+.logoImg:hover {
+    background: rgba(214, 3, 3, 0.329);
+    backdrop-filter: blur(24px);
+}
+.navEl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ulEl {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+ 
+}
+
+.navLink {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: 500;
+    color: white;
+}
+
+.navLink:hover {
+    opacity: 0.8;
+}
+
+.status{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  padding:5px 9px;
+  border-radius: 999px;
+
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(20px);
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  color:white;
+  font-size:0.9rem;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+
+  background: var(--dot-color);
+
+  box-shadow:
+    0 0 5px var(--dot-color),
+    0 0 10px var(--dot-color),
+    0 0 20px var(--dot-color);
+}
