@@ -1,8 +1,9 @@
-import Nav from "./Components/nav/Nav"
-import "./App.css"
 import { useState } from "react";
+import Nav from "./Components/nav/Nav"
 import Hero from "./Components/Hero/hero";
 import About from "./Components/About/About";
+import Footer from "./Components/Footer/footer";
+import "./App.css"
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Nav color={color} status={status} />
       <Hero />
       <About/>
+      <Footer/>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 .aboutSec {
    width: 100%;
-   height: 800px;
-   padding-top: 50px ;
+   padding-top: 15px ;
+   border-bottom: 2px solid rgba(255, 255, 255, 0.541);
 }
 
 .title {
@@ -13,4 +13,52 @@
 .dot {
    font-size: 70px;
    color:  rgb(27, 93, 131);
+}
+
+.wrapper img {
+   width: 22vw;
+   height: auto;
+  
+}
+
+.wrapper {
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 10vw; 
+}
+
+.Questions {
+   text-align: center;
+   width: 50vw;
+}
+
+.questionEl {
+   font-size: 2rem;
+   color: aliceblue;
+   background: rgba(255, 255, 255, 0.185);
+   backdrop-filter: blur(30px);
+   border-radius: 15px;
+   padding: 2px 1rem;
+   margin: 1rem;
+}
+
+.questionEl h3 {
+   margin: 5px;
+}
+
+
+.answer {
+   font-size: 1rem;
+   color:rgba(255, 255, 255, 0.808);
+}
+
+@media (max-width: 1144px) {
+   .wrapper img {
+      display: none;
+   }
+   
+   .questionEl {
+      width: 75vw;
+      box-sizing: border-box;
+   }
 }
