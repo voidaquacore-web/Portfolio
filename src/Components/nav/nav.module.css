@@ -6,9 +6,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 32px;
-    backdrop-filter: blur(20px);
     height: 70px;
     transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.6);
+    
+    /* Backdrop Filter with vendor prefixes */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    -ms-backdrop-filter: blur(20px);
 }
 
 .logoImg {
@@ -33,6 +39,9 @@
     padding: 10px 30px;
     background: rgba(255, 255, 255, 0.14);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    -ms-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 30px;
     margin: 10px;

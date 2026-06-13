@@ -5,11 +5,25 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    cssCodeSplit: true,
+    cssCodeSplit: false,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+        },
+      },
+    },
   },
   server: {
     headers: {
       'Cache-Control': 'public, max-age=3600',
     },
   },
+  assetsInclude: ['**/*.webp', '**/*.png', '**/*.jpg'],
 })

@@ -50,6 +50,9 @@
    color: aliceblue;
    background: rgba(255, 255, 255, 0.185);
    backdrop-filter: blur(30px);
+   -webkit-backdrop-filter: blur(30px);
+   -moz-backdrop-filter: blur(30px);
+   -ms-backdrop-filter: blur(30px);
    border-radius: 15px;
    padding: 1.5rem;
    margin: 1rem auto;
