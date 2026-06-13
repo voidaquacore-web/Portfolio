@@ -8,6 +8,7 @@
     box-sizing: border-box;
     overflow: hidden;
     border-bottom: 3px solid rgba(255, 255, 255, 0.295);
+    gap: 2rem;
 }
 
 .heading {
@@ -17,6 +18,29 @@
     gap: 2rem;
     width: 50%;
     z-index: 2;
+    animation: fadeInLeft 0.8s ease;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .role {
@@ -26,6 +50,11 @@
     width: fit-content;
     padding-bottom: 8px;
     margin: 0;
+    transition: all 0.3s ease;
+}
+
+.role:hover {
+    border-color: rgb(49, 218, 240);
 }
 
 .name {
@@ -34,6 +63,11 @@
     font-weight: 700;
     line-height: 0.95;
     margin: 0;
+    transition: all 0.3s ease;
+}
+
+.name:hover {
+    transform: scale(1.02);
 }
 
 .blue {
@@ -45,22 +79,58 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeInRight 0.8s ease;
 }
 
 .art img {
     max-width: 100%;
     max-height: 500px;
     object-fit: contain;
+    will-change: transform;
+    transition: transform 0.3s ease;
+}
+
+.art img:hover {
+    transform: scale(1.05);
+}
+
+/* Desktop Large */
+@media (min-width: 1440px) {
+    .hero {
+        padding: 3rem 4rem;
+        min-height: 600px;
+    }
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
     .hero {
         padding: 1.5rem;
+        min-height: 450px;
     }
 
     .art {
         width: 40%;
+    }
+    
+    .art img {
+        max-height: 400px;
+    }
+}
+
+/* Small Tablet */
+@media (max-width: 900px) {
+    .hero {
+        min-height: 400px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .heading {
+        gap: 1.5rem;
+    }
+    
+    .art img {
+        max-height: 350px;
     }
 }
 
@@ -69,20 +139,52 @@
     .hero {
         flex-direction: column;
         text-align: center;
-        gap: 2rem;
-        padding-top: 3rem;
+        gap: 1.5rem;
+        padding: 2rem 1rem;
+        min-height: auto;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.295);
     }
 
     .heading {
         width: 100%;
         align-items: center;
+        gap: 1.5rem;
     }
 
     .art {
-        width: 80%;
+        width: 90%;
+        max-width: 400px;
     }
 
     .art img {
-        max-height: 300px;
+        max-height: 280px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .hero {
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+    }
+    
+    .heading {
+        gap: 1rem;
+    }
+    
+    .role {
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+    }
+    
+    .name {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+    
+    .art {
+        width: 100%;
+    }
+    
+    .art img {
+        max-height: 200px;
     }
 }

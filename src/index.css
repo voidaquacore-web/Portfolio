@@ -1,4 +1,9 @@
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .sora {
   font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
@@ -6,13 +11,32 @@
   font-style: oblique;
 }
 
-
 body {
   font-family: "Sora", sans-serif;
   margin: 0;
+  padding: 0;
   min-height: 100vh;
   background: url("./assets/bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive typography base */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
 }

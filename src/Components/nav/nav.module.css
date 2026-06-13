@@ -7,6 +7,8 @@
     align-items: center;
     padding: 0px 32px;
     backdrop-filter: blur(20px);
+    height: 70px;
+    transition: all 0.3s ease;
 }
 
 .logoImg {
@@ -14,12 +16,13 @@
     width: auto;
     padding: 15px 20px;
     border-radius: 20px;
-
-    transition: 0.2s ease;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .logoImg:hover {
     background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
 }
 
 .ulEl {
@@ -40,12 +43,174 @@
     color: white;
     font-size: 1rem;
     font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+}
 
-    transition: 0.2s ease;
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(49, 218, 240);
+    transition: width 0.3s ease;
 }
 
 .navLink:hover {
     color: rgb(190, 190, 190);
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--dot-color, #4ade80);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Hamburger Menu */
+.menuBtn {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.dotBtn {
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobileMenu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+    z-index: 999;
+    animation: slideDown 0.3s ease;
+}
+
+.mobileMenu div {
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobileMenu div:hover {
+    background: rgba(49, 218, 240, 0.3);
+    transform: translateX(5px);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .navEl {
+        padding: 0px 20px;
+    }
+    
+    .ulEl {
+        gap: 25px;
+        padding: 8px 20px;
+    }
+    
+    .navLink {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navEl {
+        padding: 0px 16px;
+        justify-content: space-between;
+    }
+
+    .menuBtn {
+        display: flex;
+        order: -1;
+    }
+
+    .ulEl {
+        display: none;
+    }
+    
+    .status {
+        font-size: 0.8rem;
+    }
+    
+    .logoImg {
+        height: 18px;
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navEl {
+        padding: 0px 12px;
+        height: 60px;
+    }
+    
+    .dotBtn {
+        width: 24px;
+        height: 2.5px;
+    }
+    
+    .status {
+        font-size: 0.75rem;
+        gap: 4px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 .status {

@@ -6,4 +6,19 @@
   backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px);
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .app {
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    background: rgba(255, 255, 255, 0.12);
+  }
 }
