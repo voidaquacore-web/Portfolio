@@ -1,5 +1,5 @@
 import styles from "./hero.module.css"
-import art from "../../assets/art.png"
+import art from "../../assets/art.webp"
 
 
 function Hero() {

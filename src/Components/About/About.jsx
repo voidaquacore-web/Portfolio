@@ -1,5 +1,5 @@
 import styles from "./About.module.css"
-import Art from "../../assets/faceArt.png"
+import Art from "../../assets/faceArt.webp"
 
 function About() {
    const aboutMe = {
