@@ -1,17 +1,13 @@
 
 .app {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(16, 86, 214, 0.363);
   min-height: 100vh;
   border-radius: 10px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
-  /* Backdrop Filter with vendor prefixes */
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  -moz-backdrop-filter: blur(12px);
-  -ms-backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 @media (max-width: 768px) {
