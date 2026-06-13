@@ -13,11 +13,14 @@
 @media (max-width: 768px) {
   .app {
     border-radius: 0px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 }
 
 @media (max-width: 480px) {
   .app {
-    background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 }
