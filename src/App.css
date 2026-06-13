@@ -20,7 +20,7 @@
 
 @media (max-width: 480px) {
   .app {
-        backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+      background: #186280;
+background: linear-gradient(to bottom, rgba(24, 98, 128, 1) 0%, rgba(38, 56, 56, 1) 50%, rgba(10, 16, 23, 1) 100%);
   }
 }
