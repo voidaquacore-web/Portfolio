@@ -8,13 +8,8 @@
     padding: 0px 32px;
     height: 70px;
     transition: all 0.3s ease;
-    background: rgba(0, 0, 0, 0.6);
-    
-    /* Backdrop Filter with vendor prefixes */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    -moz-backdrop-filter: blur(20px);
-    -ms-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(15px);
 }
 
 .logoImg {
